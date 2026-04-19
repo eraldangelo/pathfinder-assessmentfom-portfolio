@@ -1,0 +1,56 @@
+name: Bug Report
+description: Report a functional bug in Assessment.
+title: "[Bug] "
+labels:
+  - bug
+  - needs-triage
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Short description of the issue.
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - Wizard UI
+        - Validation
+        - Duplicate Check
+        - Contact Usage Check
+        - Submit API
+        - Personnel API
+        - Cloud Run Deploy
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction Steps
+      placeholder: |
+        1. Go to ...
+        2. Fill ...
+        3. Click ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Result
+    validations:
+      required: true
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Logs/Screenshots
+      description: Include console/network logs, screenshots, or video.
