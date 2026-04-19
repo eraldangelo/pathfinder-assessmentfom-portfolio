@@ -91,7 +91,7 @@ test('happy path submission smoke', async ({ page }) => {
   await completeRemainingSteps(page);
 
   await page.getByTestId('wizard-submit-button').click();
-  await expect(page.getByText('Thank you for filling out the Assessment Form!')).toBeVisible();
+  await expect(page.getByText('Thank you for completing the Assessment Form!')).toBeVisible();
 });
 
 test('duplicate submission path smoke', async ({ page }) => {

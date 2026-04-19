@@ -100,4 +100,9 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Run smoke E2E
+        env:
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: smoke-site-key
+          TURNSTILE_SECRET_KEY: smoke-secret-key
+          TURNSTILE_EXPECTED_ACTION: assessment_submit
+          TURNSTILE_EXPECTED_HOSTNAMES: localhost,127.0.0.1
         run: npm run test:e2e:smoke
